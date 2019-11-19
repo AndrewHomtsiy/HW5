@@ -39,25 +39,37 @@ line-height: 17px;
 color: #151F32;
 text-decoration: none;
 }
-nav.navigation {
-    width: 332px;
-    display: inline-flex;
-    justify-content: space-between;
+nav a {
+    margin-left: 80px;
+    padding-bottom: 3px;
     position: relative;
 }
-a { color: #151F32;
-    display:inline-flex; 
-    margin:0;
-    text-transform:uppercase; }
-a:after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px #019fb6;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
+
+nav a:after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #000;
+    width: 19px;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
 }
 
-a.fromLeft:after{  transform-origin:  0% 50%; }
+
+nav a:hover::after {
+    animation: Appearance .3s forwards;
+}
+
+@keyframes Appearance {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 19px;
+        visibility: visible;
+    }
+}
 
 .wraper .account {
     width: 88px;
