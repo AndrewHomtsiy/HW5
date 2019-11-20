@@ -637,10 +637,18 @@ footer .container {
 }
 .subscribe-right-content button {
     width: 139px;
+border:none;
     height: 50px;
     background: #fafafa;
     font-size: 16px;
     font-weight: bold;
+}
+
+
+.subscribe-right-content button:hover {
+    background-color: #032f46;
+    color: white;
+    border: 4px solid white;
 }
 
 .subscribe-right-content p {
